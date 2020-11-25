@@ -14,15 +14,46 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        
+                        
         window = UIWindow(frame: scene.coordinateSpace.bounds)
         window?.windowScene = scene
-        
-        window?.rootViewController = ViewController()
+        window?.rootViewController = createTabBar()
         window?.makeKeyAndVisible()
         
     }
 
+    enum tabBarTags: Int {
+        case searchVC = 0
+        case favoritesVC = 1
+    }
+    
+    func createTabBar() -> UITabBarController {
+        let searchNC = createSearchNC()
+        let favoritesNC = createFavoritesNC()
+        
+        let tabBar = UITabBarController()
+        UITabBar.appearance().tintColor = .systemGreen
+        tabBar.viewControllers = [searchNC, favoritesNC]
+        
+        return tabBar
+    }
+    
+    func createSearchNC() -> UINavigationController {
+        let searchVC = SearchVC()
+        searchVC.title = "Search"
+        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: tabBarTags.searchVC.rawValue)
+        
+        return UINavigationController(rootViewController: searchVC)
+    }
+    
+    func createFavoritesNC() -> UINavigationController {
+        let favoritesVC = FavoritesListVC()
+        favoritesVC.title = "Favorites"
+        favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: tabBarTags.favoritesVC.rawValue)
+        
+        return UINavigationController(rootViewController: favoritesVC)
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
