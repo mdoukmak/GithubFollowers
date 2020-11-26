@@ -36,6 +36,7 @@ class SearchVC: UIViewController {
     @objc fileprivate func selectUser() {
         
         guard isUsernameEntered else {
+            presentAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to search for!", buttonTitle: "Ok")
             return
         }
         
