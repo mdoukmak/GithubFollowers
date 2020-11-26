@@ -17,6 +17,7 @@
 		523F9259256E232E00046E58 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F9258256E232E00046E58 /* FavoritesListVC.swift */; };
 		523F925E256E2BA200046E58 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F925D256E2BA200046E58 /* GFButton.swift */; };
 		523F9263256E2DBB00046E58 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F9262256E2DBB00046E58 /* GFTextField.swift */; };
+		523F9268256F743F00046E58 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F9267256F743F00046E58 /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		523F9258256E232E00046E58 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		523F925D256E2BA200046E58 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		523F9262256E2DBB00046E58 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		523F9267256F743F00046E58 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				523F921F256E1D1200046E58 /* LaunchScreen.storyboard */,
 				523F9222256E1D1200046E58 /* Info.plist */,
 				523F9258256E232E00046E58 /* FavoritesListVC.swift */,
+				523F9267256F743F00046E58 /* FollowerListVC.swift */,
 			);
 			path = GithubFollowersApp;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				523F9259256E232E00046E58 /* FavoritesListVC.swift in Sources */,
 				523F925E256E2BA200046E58 /* GFButton.swift in Sources */,
 				523F9254256E230800046E58 /* SearchVC.swift in Sources */,
+				523F9268256F743F00046E58 /* FollowerListVC.swift in Sources */,
 				523F9215256E1D1000046E58 /* AppDelegate.swift in Sources */,
 				523F9217256E1D1000046E58 /* SceneDelegate.swift in Sources */,
 			);
